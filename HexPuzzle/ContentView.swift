@@ -8,19 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var hexState: HexState
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Level " + String(hexState.level))
+                .font(.title)
+                .padding()
+            Text("Tap to change colors")
+                .font(.headline)
+                .padding()
+            ForEach(hexState.currentPattern, id: \.self) { row in
+                HStack {
+                    ForEach(row) { hex in
+                        HexButton(hex: hex)
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(HexState())
     }
 }

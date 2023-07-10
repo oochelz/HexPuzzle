@@ -11,6 +11,10 @@
 		5EB8A8F32A5B70F3003734CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8A8F22A5B70F3003734CD /* ContentView.swift */; };
 		5EB8A8F52A5B70F4003734CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB8A8F42A5B70F4003734CD /* Assets.xcassets */; };
 		5EB8A8F82A5B70F4003734CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB8A8F72A5B70F4003734CD /* Preview Assets.xcassets */; };
+		5EB8A8FF2A5B7237003734CD /* HexButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8A8FE2A5B7237003734CD /* HexButton.swift */; };
+		5EB8A9012A5B8218003734CD /* HexState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8A9002A5B8218003734CD /* HexState.swift */; };
+		5EB8A9032A5B9B29003734CD /* Levels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8A9022A5B9B29003734CD /* Levels.swift */; };
+		5EB8A9052A5C2297003734CD /* Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8A9042A5C2297003734CD /* Hex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		5EB8A8F22A5B70F3003734CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5EB8A8F42A5B70F4003734CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EB8A8F72A5B70F4003734CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5EB8A8FE2A5B7237003734CD /* HexButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexButton.swift; sourceTree = "<group>"; };
+		5EB8A9002A5B8218003734CD /* HexState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexState.swift; sourceTree = "<group>"; };
+		5EB8A9022A5B9B29003734CD /* Levels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levels.swift; sourceTree = "<group>"; };
+		5EB8A9042A5C2297003734CD /* Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,10 @@
 				5EB8A8F22A5B70F3003734CD /* ContentView.swift */,
 				5EB8A8F42A5B70F4003734CD /* Assets.xcassets */,
 				5EB8A8F62A5B70F4003734CD /* Preview Content */,
+				5EB8A8FE2A5B7237003734CD /* HexButton.swift */,
+				5EB8A9002A5B8218003734CD /* HexState.swift */,
+				5EB8A9022A5B9B29003734CD /* Levels.swift */,
+				5EB8A9042A5C2297003734CD /* Hex.swift */,
 			);
 			path = HexPuzzle;
 			sourceTree = "<group>";
@@ -137,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EB8A9032A5B9B29003734CD /* Levels.swift in Sources */,
 				5EB8A8F32A5B70F3003734CD /* ContentView.swift in Sources */,
+				5EB8A8FF2A5B7237003734CD /* HexButton.swift in Sources */,
+				5EB8A9052A5C2297003734CD /* Hex.swift in Sources */,
 				5EB8A8F12A5B70F3003734CD /* HexPuzzleApp.swift in Sources */,
+				5EB8A9012A5B8218003734CD /* HexState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

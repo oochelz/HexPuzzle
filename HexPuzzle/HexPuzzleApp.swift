@@ -11,7 +11,7 @@ import SwiftUI
 struct HexPuzzleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(HexState())
         }
     }
 }
