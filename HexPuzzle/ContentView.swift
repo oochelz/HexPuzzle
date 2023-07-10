@@ -9,21 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var hexState: HexState
+    @State var isAnimating: Bool = false
     
     var body: some View {
         VStack {
-            Text("Level " + String(hexState.level))
-                .font(.title)
-                .padding()
-            Text("Tap to change colors")
-                .font(.headline)
-                .padding()
-            ForEach(hexState.currentPattern, id: \.self) { row in
-                HStack {
-                    ForEach(row) { hex in
-                        HexButton(hex: hex)
+            if hexState.level <= Levels.max {
+                Text("Level " + String(hexState.level))
+                    .font(.title)
+                    .scaleEffect(isAnimating ?  1.3 : 1.0)
+                PatternToMatch(pattern: Levels.getPattern(level: hexState.level))
+                    .padding()
+                    .rotationEffect(Angle(degrees: isAnimating ? 360 : 0))
+                    .onChange(of: hexState.level) {_ in
+                        isAnimating = true
+                        withAnimation(.spring()) {
+                            isAnimating = false
+                        }
+                    }
+                
+                Text("Tap to change colors")
+                    .font(.headline)
+                    .padding()
+                ForEach(hexState.currentPattern, id: \.self) { row in
+                    HStack {
+                        ForEach(row) { hex in
+                            HexButton(hex: hex)
+                        }
                     }
                 }
+            } else {
+                Text("You did it!")
             }
         }
     }

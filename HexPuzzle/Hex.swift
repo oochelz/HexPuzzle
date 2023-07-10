@@ -34,6 +34,6 @@ class Hex: Hashable, ObservableObject, Identifiable {
     }
     
     static func == (lhs: Hex, rhs: Hex) -> Bool {
-        return lhs.color == rhs.color
+        return lhs.id == rhs.id
     }
 }

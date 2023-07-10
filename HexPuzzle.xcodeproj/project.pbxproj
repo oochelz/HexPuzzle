@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E3F30932A5CAF6000C697F8 /* PatternToMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F30922A5CAF6000C697F8 /* PatternToMatch.swift */; };
 		5EB8A8F12A5B70F3003734CD /* HexPuzzleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8A8F02A5B70F3003734CD /* HexPuzzleApp.swift */; };
 		5EB8A8F32A5B70F3003734CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8A8F22A5B70F3003734CD /* ContentView.swift */; };
 		5EB8A8F52A5B70F4003734CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB8A8F42A5B70F4003734CD /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E3F30922A5CAF6000C697F8 /* PatternToMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternToMatch.swift; sourceTree = "<group>"; };
 		5EB8A8ED2A5B70F3003734CD /* HexPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB8A8F02A5B70F3003734CD /* HexPuzzleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexPuzzleApp.swift; sourceTree = "<group>"; };
 		5EB8A8F22A5B70F3003734CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				5EB8A9002A5B8218003734CD /* HexState.swift */,
 				5EB8A9022A5B9B29003734CD /* Levels.swift */,
 				5EB8A9042A5C2297003734CD /* Hex.swift */,
+				5E3F30922A5CAF6000C697F8 /* PatternToMatch.swift */,
 			);
 			path = HexPuzzle;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E3F30932A5CAF6000C697F8 /* PatternToMatch.swift in Sources */,
 				5EB8A9032A5B9B29003734CD /* Levels.swift in Sources */,
 				5EB8A8F32A5B70F3003734CD /* ContentView.swift in Sources */,
 				5EB8A8FF2A5B7237003734CD /* HexButton.swift in Sources */,

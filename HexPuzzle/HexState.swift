@@ -19,9 +19,9 @@ class HexState: ObservableObject {
     
     func checkPattern() {
         let pattern = currentPattern.flatMap { $0.map { $0.color } }
-        if (pattern == Levels.getPattern(level: level)) {
+        if (pattern == Levels.getFlattenedPattern(level: level)) {
             print("You did it!")
-            if level < Levels.max {
+            if level <= Levels.max {
                 level += 1
             }
         } else {
