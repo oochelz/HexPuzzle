@@ -1,4 +1,7 @@
 # HexPuzzle
 For the GCPL 2023 GameJam: Strange Side Effects
 
-![image](https://github.com/oochelz/HexPuzzle/assets/1957170/18b8976d-2194-4720-99ab-f6dbc8eeeb42)
+Try to match the pattern shown. But watch out, because some moves might do something unexpected...
+
+![image](https://github.com/oochelz/HexPuzzle/assets/1957170/9c6a9a23-5a00-4c47-9c14-f60fd6f96589)
+
