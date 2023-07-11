@@ -26,6 +26,18 @@ struct Levels {
             ["Blue", "Green"],
             ["Green", "Blue", "Green"],
             ["Green", "Blue"]
+        ],
+        // Level 4
+        [
+            ["Pink", "Purple"],
+            ["Blue", "Green", "Blue"],
+            ["Pink", "Purple"]
+        ],
+        // Level 5
+        [
+            ["Yellow", "Pink"],
+            ["Blue", "Pink", "Blue"],
+            ["Pink", "Blue"]
         ]
     ]
     

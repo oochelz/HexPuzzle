@@ -32,13 +32,17 @@ struct ContentView: View {
                             isAnimating = false
                         }
                     }
-                Text("Match the pattern!")
+                Text("Match the pattern! Watch out for hexes.")
                     .font(.headline)
                     .padding()
                 GameBoard()
             } else {
                 YouWon()
             }
+            Button("Restart") {
+                hexState.reset()
+            }
+            .padding()
         }
     }
 }
