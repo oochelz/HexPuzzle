@@ -9,39 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var hexState: HexState
-    @State var isAnimating: Bool = false
     
     var body: some View {
         VStack {
             if !hexState.hasWon {
-                Text("Level " + String(hexState.level))
-                    .font(.title)
-                    .scaleEffect(isAnimating ?  1.3 : 1.0)
                 PatternToMatch(pattern: Levels.getPattern(level: hexState.level))
-                    .padding()
-                    .rotationEffect(Angle(degrees: isAnimating ? 360 : 0))
-                    .onChange(of: hexState.level) {_ in
-                        isAnimating = true
-                        withAnimation(.spring()) {
-                            isAnimating = false
-                        }
-                    }
-                    .onAppear {
-                        isAnimating = true
-                        withAnimation(.spring()) {
-                            isAnimating = false
-                        }
-                    }
-                Text("Match the pattern! Watch out for hexes.")
+                Text("Match the pattern!")
                     .font(.headline)
                     .padding()
                 GameBoard()
             } else {
                 YouWon()
             }
-            Button("Restart") {
+            Button("Restart Game") {
                 hexState.reset()
             }
+            .buttonStyle(.bordered)
             .padding()
         }
     }
