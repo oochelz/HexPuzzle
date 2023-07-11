@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            if hexState.level <= Levels.max {
+            if !hexState.hasWon {
                 Text("Level " + String(hexState.level))
                     .font(.title)
                     .scaleEffect(isAnimating ?  1.3 : 1.0)
@@ -26,19 +26,18 @@ struct ContentView: View {
                             isAnimating = false
                         }
                     }
-                
-                Text("Tap to change colors")
-                    .font(.headline)
-                    .padding()
-                ForEach(hexState.currentPattern, id: \.self) { row in
-                    HStack {
-                        ForEach(row) { hex in
-                            HexButton(hex: hex)
+                    .onAppear {
+                        isAnimating = true
+                        withAnimation(.spring()) {
+                            isAnimating = false
                         }
                     }
-                }
+                Text("Match the pattern!")
+                    .font(.headline)
+                    .padding()
+                GameBoard()
             } else {
-                Text("You did it!")
+                YouWon()
             }
         }
     }

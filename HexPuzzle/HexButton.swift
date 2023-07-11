@@ -15,8 +15,7 @@ struct HexButton: View {
         Button(action: {
             hex.changeColor()
             hexState.checkPattern()
-        }) {
-        }
+        }) { }
         .buttonStyle(HexButtonStyle(color: Color($hex.color.wrappedValue)))
     }
 }
