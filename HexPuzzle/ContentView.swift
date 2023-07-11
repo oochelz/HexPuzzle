@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+// TODO: Make a better transition to Winning screen.
+// TODO: Restart level instead of whole game.
+// TODO: Navigation buttons (Reset, Info)
+
 struct ContentView: View {
     @EnvironmentObject var hexState: HexState
     
