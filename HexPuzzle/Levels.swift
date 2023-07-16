@@ -31,13 +31,31 @@ struct Levels {
         [
             ["Pink", "Purple"],
             ["Blue", "Green", "Blue"],
-            ["Pink", "Purple"]
+            ["Purple", "Purple"]
         ],
         // Level 5
         [
-            ["Yellow", "Pink"],
-            ["Blue", "Pink", "Blue"],
-            ["Pink", "Blue"]
+            ["Green", "Green"],
+            ["Green", "Orange", "Green"],
+            ["Purple", "Purple"]
+        ],
+        // Level 6
+        [
+            ["Orange", "Pink"],
+            ["Blue", "Blue", "Blue"],
+            ["Pink", "Green"]
+        ],
+        // Level 7
+        [
+            ["Pink", "Purple"],
+            ["Green", "Blue", "Green"],
+            ["Purple", "Pink"]
+        ],
+        // Level 8
+        [
+            ["Green", "Green"],
+            ["Green", "Purple", "Pink"],
+            ["Green", "Orange"]
         ]
     ]
     
@@ -49,5 +67,13 @@ struct Levels {
     
     static func getFlattenedPattern(level: Int) -> Array<String> {
         return patterns[level - 1].flatMap { $0 }
+    }
+    
+    static func getStartingPattern() -> Array<Array<Hex>> {
+        return [
+            [Hex(color: "Green"), Hex(color: "Green")],
+            [Hex(color: "Green"), Hex(color: "Green"), Hex(color: "Green")],
+            [Hex(color: "Green"), Hex(color: "Green")],
+        ]
     }
 }

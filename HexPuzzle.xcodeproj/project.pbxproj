@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5E3F30932A5CAF6000C697F8 /* PatternToMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F30922A5CAF6000C697F8 /* PatternToMatch.swift */; };
 		5E3F30952A5CC6B500C697F8 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F30942A5CC6B500C697F8 /* GameBoard.swift */; };
-		5E3F30972A5CC8D700C697F8 /* YouWon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F30962A5CC8D700C697F8 /* YouWon.swift */; };
 		5EB8A8F12A5B70F3003734CD /* HexPuzzleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8A8F02A5B70F3003734CD /* HexPuzzleApp.swift */; };
 		5EB8A8F32A5B70F3003734CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8A8F22A5B70F3003734CD /* ContentView.swift */; };
 		5EB8A8F52A5B70F4003734CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB8A8F42A5B70F4003734CD /* Assets.xcassets */; };
@@ -19,12 +18,12 @@
 		5EB8A9032A5B9B29003734CD /* Levels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8A9022A5B9B29003734CD /* Levels.swift */; };
 		5EB8A9052A5C2297003734CD /* Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8A9042A5C2297003734CD /* Hex.swift */; };
 		5EB8A9072A5C2DE9003734CD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5EB8A9062A5C2DE9003734CD /* README.md */; };
+		5ED38D802A649ED000F60D6C /* Hints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED38D7F2A649ED000F60D6C /* Hints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E3F30922A5CAF6000C697F8 /* PatternToMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternToMatch.swift; sourceTree = "<group>"; };
 		5E3F30942A5CC6B500C697F8 /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
-		5E3F30962A5CC8D700C697F8 /* YouWon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouWon.swift; sourceTree = "<group>"; };
 		5EB8A8ED2A5B70F3003734CD /* HexPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB8A8F02A5B70F3003734CD /* HexPuzzleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexPuzzleApp.swift; sourceTree = "<group>"; };
 		5EB8A8F22A5B70F3003734CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +34,7 @@
 		5EB8A9022A5B9B29003734CD /* Levels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levels.swift; sourceTree = "<group>"; };
 		5EB8A9042A5C2297003734CD /* Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hex.swift; sourceTree = "<group>"; };
 		5EB8A9062A5C2DE9003734CD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5ED38D7F2A649ED000F60D6C /* Hints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 				5EB8A9042A5C2297003734CD /* Hex.swift */,
 				5E3F30922A5CAF6000C697F8 /* PatternToMatch.swift */,
 				5E3F30942A5CC6B500C697F8 /* GameBoard.swift */,
-				5E3F30962A5CC8D700C697F8 /* YouWon.swift */,
+				5ED38D7F2A649ED000F60D6C /* Hints.swift */,
 			);
 			path = HexPuzzle;
 			sourceTree = "<group>";
@@ -162,10 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E3F30972A5CC8D700C697F8 /* YouWon.swift in Sources */,
 				5E3F30932A5CAF6000C697F8 /* PatternToMatch.swift in Sources */,
 				5EB8A9032A5B9B29003734CD /* Levels.swift in Sources */,
 				5EB8A8F32A5B70F3003734CD /* ContentView.swift in Sources */,
+				5ED38D802A649ED000F60D6C /* Hints.swift in Sources */,
 				5EB8A8FF2A5B7237003734CD /* HexButton.swift in Sources */,
 				5E3F30952A5CC6B500C697F8 /* GameBoard.swift in Sources */,
 				5EB8A9052A5C2297003734CD /* Hex.swift in Sources */,

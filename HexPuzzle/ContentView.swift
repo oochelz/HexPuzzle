@@ -7,29 +7,43 @@
 
 import SwiftUI
 
-// TODO: Make a better transition to Winning screen.
-// TODO: Restart level instead of whole game.
-// TODO: Navigation buttons (Reset, Info)
-
 struct ContentView: View {
     @EnvironmentObject var hexState: HexState
+    @State private var showingHint = false
+    private var hints = Hints()
     
     var body: some View {
         VStack {
+            Spacer()
             if !hexState.hasWon {
                 PatternToMatch(pattern: Levels.getPattern(level: hexState.level))
                 Text("Match the pattern!")
                     .font(.headline)
                     .padding()
-                GameBoard()
             } else {
-                YouWon()
+                Text("✨ You did it! ✨")
+                    .font(.largeTitle)
+                    .padding()
             }
-            Button("Restart Game") {
-                hexState.reset()
+            GameBoard()
+            Spacer()
+            HStack{
+                Button("Restart Game") {
+                    hexState.reset()
+                }
+                .padding()
+                .background(Color("Gray"))
+                .clipShape(Capsule())
+                .controlSize(.mini)
+                Button("") {
+                    hints.next()
+                    showingHint = true
+                }
+                .buttonStyle(HexButtonStyle(color: Color("Gray"), text: "?"))
+                .alert(hints.print(), isPresented: $showingHint) {
+                    Button("OK", role: .cancel) { }
+                }
             }
-            .buttonStyle(.bordered)
-            .padding()
         }
     }
 }

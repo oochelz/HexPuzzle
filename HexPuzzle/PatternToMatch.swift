@@ -48,6 +48,6 @@ struct PatternToMatch: View {
 
 struct PatternToMatch_Previews: PreviewProvider {
     static var previews: some View {
-        PatternToMatch(pattern: Levels.getPattern(level: 1)).environmentObject(HexState())
+        PatternToMatch(pattern: Levels.getPattern(level: 8)).environmentObject(HexState())
     }
 }

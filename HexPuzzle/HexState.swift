@@ -10,32 +10,20 @@ import SwiftUI
 class HexState: ObservableObject {
     @Published var level = 1
     @Published var hasWon = false
-    @Published var currentPattern: Array<Array<Hex>> = [
-        [Hex(color: "Green"), Hex(color: "Green")],
-        [Hex(color: "Green"), Hex(color: "Green"), Hex(color: "Green")],
-        [Hex(color: "Green"), Hex(color: "Green")],
-    ]
+    @Published var currentPattern: Array<Array<Hex>> = Levels.getStartingPattern()
     
     init() {}
     
     func reset() {
         level = 1
         hasWon = false
-        currentPattern = [
-            [Hex(color: "Green"), Hex(color: "Green")],
-            [Hex(color: "Green"), Hex(color: "Green"), Hex(color: "Green")],
-            [Hex(color: "Green"), Hex(color: "Green")],
-        ]
+        currentPattern = Levels.getStartingPattern()
     }
     
     func checkPattern() {
         var pattern = currentPattern.flatMap { $0.map { $0.color } }
         if (pattern == Levels.getFlattenedPattern(level: level)) {
-            if level < Levels.max {
-                level += 1
-            } else {
-                hasWon = true
-            }
+            adjustLevel()
             return;
         }
         
@@ -44,11 +32,7 @@ class HexState: ObservableObject {
         // Recheck the board for a win with the side effects
         pattern = currentPattern.flatMap { $0.map { $0.color } }
         if (pattern == Levels.getFlattenedPattern(level: level)) {
-            if level < Levels.max {
-                level += 1
-            } else {
-                hasWon = true
-            }
+            adjustLevel()
         }
     }
     
@@ -64,11 +48,21 @@ class HexState: ObservableObject {
         }
         
         if Int.random(in: 0...3) == 1 {
-            currentPattern.randomElement()?.randomElement()?.color = "Yellow"
+            currentPattern.randomElement()?.randomElement()?.color = "Orange"
         }
         
-        if pattern.filter({ $0 == "Yellow" }).count == 1 && pattern.filter({ $0 == "Pink" }).count == 1 {
+        if pattern.filter({ $0 == "Orange" }).count == 1 && pattern.filter({ $0 == "Pink" }).count == 1 {
             currentPattern.reverse()
+        }
+    }
+    
+    func adjustLevel() {
+        if level < Levels.max {
+            level += 1
+        } else {
+            hasWon = true
+            let feedback = UINotificationFeedbackGenerator()
+            feedback.notificationOccurred(.success)
         }
     }
 }
