@@ -57,12 +57,12 @@ class HexState: ObservableObject {
     }
     
     func adjustLevel() {
+        let feedback = UINotificationFeedbackGenerator()
+        feedback.notificationOccurred(.success)
         if level < Levels.max {
             level += 1
         } else {
             hasWon = true
-            let feedback = UINotificationFeedbackGenerator()
-            feedback.notificationOccurred(.success)
         }
     }
 }
